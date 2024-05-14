@@ -2,6 +2,7 @@
 //this page contains two links for About and Projects
 import React from "react";
 import { Link } from "react-router-dom";
+import "./MainPageTwo.css";
 
 export default function MainPageTwo() {
   return (
