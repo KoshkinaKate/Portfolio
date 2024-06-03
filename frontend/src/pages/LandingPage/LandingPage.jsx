@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
-import image from "../../assets/pictures/MIK05861.jpg";
+import image from "../../assets/pictures/MIK05735.jpg";
 import "./LandingPage.css";
 
 export default function LandingPage() {
