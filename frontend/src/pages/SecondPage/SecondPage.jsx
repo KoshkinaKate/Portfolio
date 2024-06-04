@@ -5,7 +5,9 @@ import "./SecondPage.css";
 
 export default function MainPageTwo() {
   return (
-    <div className="main-page-two">
+    <div className="second-page-two">
+      <p className="one"> Under Construction</p>
+
 
     </div>
   );

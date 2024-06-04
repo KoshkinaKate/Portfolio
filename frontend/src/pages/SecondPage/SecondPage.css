@@ -1,3 +1,10 @@
-.main-page-two{
-    border: solid green;
+.second-page-two{
+    border: solid white;
+    height: 100vh;
+    margin-left: 230px;
+}
+.one{
+    font-size: 45px;
+    justify-content: center;
+    display: flex;
 }

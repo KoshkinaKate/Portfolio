@@ -1,45 +1,110 @@
-/* src/components/NavBar/NavBar.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
 
 .navbar {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 50px; /* Initial width of the navbar */
-    background-color: #333;
-    overflow-x: hidden; /* Hide horizontal scroll */
-    transition: width 0.3s; /* Smooth transition for width */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .navbar:hover {
-    width: 200px; /* Width when hovered */
-  }
-  
-  .nav-link {
-    padding: 20px 10px;
-    text-align: center;
-    width: 100%;
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2em;
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Ellipsis when text overflows */
-    transition: background-color 0.3s; /* Smooth transition for background color */
-  }
-  
-  .nav-link:hover {
-    background-color: #555;
-  }
-  
-  .nav-link span {
-    display: none; /* Hide text by default */
-  }
-  
-  .navbar:hover .nav-link span {
-    display: inline; /* Show text when navbar is hovered */
-  }
-  
+  position: fixed;
+  height: 100%;
+  width: 110px; 
+  overflow-x: hidden;
+  transition: width 0.4s; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.navbar:hover {
+  width: 200px;
+  background-color: rgb(0, 0, 0);
+}
+
+.burger-icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.burger-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+}
+
+.burger-lines span {
+  display: block;
+  height: 4px;
+  width: 30px;
+  background: #fff;
+  border-radius: 2px;
+  margin: 3px 0;
+}
+
+.menu-text {
+  color: #fff;
+  font-size: 1em;
+  margin-left: 10px;
+  font-weight: 300; 
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start; 
+  width: 100%;
+  /* flex-grow: 1; */
+  margin-top: 50px;
+  padding-left: 10px;
+}
+
+.nav-link, .work-page {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 10px;
+  margin: 10px 0;
+  text-align: left; 
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  white-space: nowrap; 
+  overflow: hidden;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  font-weight: 200;
+}
+
+.nav-link {
+  color: rgb(138, 138, 138);
+}
+
+.work-page {
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #fff;
+}
+
+.nav-link:hover {
+  color: #cccaca;
+  transform: translateY(-5px);
+}
+
+.work-page:hover {
+  color: #FF0036;
+}
+
+.nav-link span, .work-page span {
+  display: none; /* Hides text by default */
+}
+
+.navbar:hover .nav-link span, .navbar:hover .work-page span {
+  display: inline; /* Showing text when navbar is hovered */
+}
+
