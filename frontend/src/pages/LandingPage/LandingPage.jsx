@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa6"; 
 import image from "../../assets/pictures/MIK05735.jpg";
 import "./LandingPage.css";
 
@@ -12,9 +12,9 @@ export default function LandingPage() {
         <h1 className="name">I'm Kate</h1>
         <h3 className="intro">software engineer  .  front-end  .  back-end  .  </h3>
         <h4 className="descripton">
-        I'm ready to assist with your projects and am eager for new opportunities.
+          I'm ready to assist with your projects and am eager for new opportunities.
         </h4>
-        <Link className ="topage"to="/secondpage">
+        <Link className="topage" to="/secondpage">
           <div className="portfolio-link">
             <p>P o r t f o l i o</p>
           </div>
@@ -25,7 +25,7 @@ export default function LandingPage() {
           rel="link"
           className="linkedin-link"
         >
-          <FaLinkedin />
+          <FaLinkedinIn />
         </a>
       </div>
       <div className="main-right-half">
@@ -36,6 +36,7 @@ export default function LandingPage() {
     </div>
   );
 }
+
 
 
 

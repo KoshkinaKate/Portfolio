@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000;
+  color: #fff;
+  /* height: 100%; */
+}
+
+.contact-page {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border: solid transparent;
+  margin-left: 220px; /* otherwise container not in the middle */
+  margin-right: 220px;
+}
+
+.contact-container {
+  max-width: 450px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  margin-top: 100px; /* otherwise container not in the middle */
+  
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #fff;
+  text-align: left;
+  font-weight: 200;
+  font-size: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000; 
+}
+
+.contact-form textarea {
+  height: 150px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #ccc;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-form button {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 20px; 
+  cursor: pointer;
+  width: 170px;
+  margin: 5px 0;
+  align-self: flex-start;
+}
+
+.contact-form button:hover {
+  background-color: #fff;
+  color: #000; 
+}
+
+.thank-you-message {
+  text-align: center;
+  font-size: 2em;
+  color: #C9AF08;
+ padding-top: 40px;
+ font-weight: 200;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 40px;
+  font-weight: 200;
+  font-size: 13px;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  color: #fff;
+}
+
+.contact-info p span {
+  color: #C9AF08;
+}
+
+.contact-info p a {
+  color: #fff; 
+  text-decoration: none;
+}
+
+.contact-info p a:hover {
+  text-decoration: underline;
+}
+
+.linkedin-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 2em;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+    .contact-container {
+      padding: 10px;
+    }
+  
+    .contact-form button {
+      width: auto; 
+    }
+  }
+  
+  
+  /* -------------------------------------Media queries for smartphones */
+  @media (max-width: 768px) {
+    .contact-container {
+      padding: 10px;
+      margin-left: 10px; 
+      margin-right: 10px;
+    }
+  
+    .contact-form button {
+      width: auto; 
+      padding: 10px 20px;
+      font-size: 16px; 
+    }
+  }
+
+
+

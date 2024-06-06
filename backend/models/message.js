@@ -10,7 +10,7 @@ const messageSchema = new mongoose.Schema({
                 return /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(v);
             },
             message: props => `${props.value} is not a valid email address!`
-        }//function uses a regular expression (regex) to test whether the email field contains a valid email address format
+        }
     },
     body: {
         type: String,
@@ -19,8 +19,7 @@ const messageSchema = new mongoose.Schema({
     }
 });
 
-
 const Message = mongoose.model("Message", messageSchema);
 
-
 module.exports = Message;
+

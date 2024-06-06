@@ -19,8 +19,8 @@ export default function App() {
         <Route path="/secondpage" element={<SecondPage />} />
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Project />} />
-        <Route path="/resume" element={<Resume/>} />
-        <Route path="/contact" element={<Contact/>} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
     </div>
   );
