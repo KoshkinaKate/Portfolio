@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaLinkedinIn } from "react-icons/fa6"; 
+import { FaLinkedinIn, FaGithub } from "react-icons/fa6"; 
 import image from "../../assets/pictures/katya.jpg";
 import "./LandingPage.css";
 
@@ -19,14 +19,24 @@ export default function LandingPage() {
             <p>P o r t f o l i o</p>
           </div>
         </Link>
-        <a
-          href="https://www.linkedin.com/in/kate-koshkina/"
-          target="_blank"
-          rel="link"
-          className="linkedin-link"
-        >
-          <FaLinkedinIn />
-        </a>
+        <div className="social-links">
+          <a
+            href="https://www.linkedin.com/in/kate-koshkina/"
+            target="_blank"
+            rel="link"
+            className="linkedin-link"
+          >
+            <FaLinkedinIn />
+          </a>
+          <a
+            href="https://github.com/KoshkinaKate"
+            target="_blank"
+            rel="link"
+            className="linkedin-link"
+          >
+            <FaGithub />
+          </a>
+        </div>
       </div>
       <div className="main-right-half">
         <div className="img-container">
@@ -36,6 +46,7 @@ export default function LandingPage() {
     </div>
   );
 }
+
 
 
 

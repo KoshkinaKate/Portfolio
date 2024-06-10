@@ -21,6 +21,8 @@ body, html {
 
 .main-left-half, .main-right-half {
   padding: 20px;
+  /* border: solid white; */
+  width: 50%;
 }
 
 .main-left-half {
@@ -29,13 +31,13 @@ body, html {
   justify-content: center;
   align-items: center; 
   text-align: center;
-  padding-right: 200px;
 }
 
 .greatings {
   font-size: 6em;
   margin: 0;
   color: #fff;
+  margin-bottom: -0.4em;
 }
 
 .name {
@@ -68,7 +70,8 @@ body, html {
   margin-top: 20px;
   width: 300px;
   font-size: 20px;
-  margin-top: 0;
+  margin-top: 20px;
+  
 }
 .portfolio-link:hover{
   background-color: #FF0036;
@@ -78,8 +81,15 @@ body, html {
   margin: 0;
 }
 
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+}
+
 .linkedin-link {
-  margin-top: 30px;
+  margin: 0 10px;
   padding: 30px;
   color: white;
   text-decoration: none;
@@ -87,6 +97,7 @@ body, html {
   display: flex;
   align-items: center;
   /* border: solid white; */
+  padding: 0;
 }
 
 .img-container {
@@ -173,6 +184,7 @@ body, html {
     font-size: 0.5em;
   }
 }
+
 
 
 
