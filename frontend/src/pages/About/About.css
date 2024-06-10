@@ -1,5 +1,66 @@
-.about-page{
-    border: solid red;
-    margin-left: 220px;
-    height: 100vh;
+body, html {
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.about-page {
+  display: flex;
+  justify-content: center;
+  margin-left: 220px;
+  padding: 0px;
+}
+
+.resume-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  overflow: hidden; /* no overflow from the image */
+  margin: 120px 0px 120px 0px;
+}
+
+.resume-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* image fits within the container */
+}
+/* -----------------Media queries for large tablets or small laptops */
+@media (max-width: 1200px) and (min-width: 1025px) {
+  .about-page {
+    width: calc(100% - 30px); 
+    margin-left: 15px; 
+  }
+
+  .resume-container {
+    max-width: 700px; 
+    margin: 100px 0; 
+  }
+}
+
+/* Media queries for tablets */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .about-page {
+    width: calc(100% - 20px); /*the element's width will be the full width of its containing block (100%) minus 20 pixels.*/
+    margin-left: 10px; 
+  }
+
+  .resume-container {
+    max-width: 600px; 
+    margin: 80px 0; 
+  }
+}
+
+/* Media queries for smartphones */
+@media (max-width: 768px) {
+  .about-page {
+    width: calc(100% - 20px); 
+    margin-left: 10px; 
+  }
+
+  .resume-container {
+    width: 100%;
+    max-width: 400px; 
+    padding: 20px;
+    margin: 60px 0;
+  }
 }

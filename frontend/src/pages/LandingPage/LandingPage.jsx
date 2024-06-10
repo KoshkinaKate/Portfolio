@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa6"; 
-import image from "../../assets/pictures/katya.jpg";
+import image from "../../assets/pictures/photo.jpg";
 import "./LandingPage.css";
 
 export default function LandingPage() {

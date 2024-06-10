@@ -1,10 +1,13 @@
 import React from "react";
+import image from "../../assets/pictures/Resume.jpg";
 import "./About.css";
 
 export default function About() {
   return (
     <div className="about-page">
-      <h2>About Me</h2>
+      <div className="resume-container">
+        <img className="resume-image" src={image} alt="Resume" />
+      </div>
     </div>
   );
 }
