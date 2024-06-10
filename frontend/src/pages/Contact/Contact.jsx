@@ -34,7 +34,7 @@ export default function Contact() { // Define state for form data and submission
       }
     } catch (error) {
       console.error('Error:', error); // Log any errors
-      alert('Failed to send message'); // Alert on error
+      alert('Failed to send message'); // Alert on errors
     }
   };
 
