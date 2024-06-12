@@ -74,6 +74,11 @@ const SecondPage = () => {
           setGameOver(true);
           setGameStarted(false);
           document.removeEventListener('keydown', handleKeyDown);
+
+          // Remove all obstacles when the game ends
+          const gameContainer = gameContainerRef.current;
+          const obstacles = gameContainer.querySelectorAll('.obstacle');
+          obstacles.forEach(obstacle => gameContainer.removeChild(obstacle));
         }
 
         obstaclePosition -= 5;
@@ -111,22 +116,51 @@ const SecondPage = () => {
     <div className="SP">
       <NavBar />
       <div className="second-page-container">
-        {gameOver && <div className="game-over">Game Over</div>}
-        {!gameStarted && (
-          <button className="start-button" onClick={startGame}>
-            {gameOver ? 'Start Again' : 'Start Game'}
-          </button>
+        {gameOver ? (
+          <div className="game-over">
+            {score > 5 ? 
+              `Great job! Your score: ${score}. Now it's time to take a look at my portfolio.` : 
+              `Oops. You tried! Your score: ${score}. Now it's time to take a look at my portfolio.`
+            }
+          </div>
+        ) : (
+          <>
+            {!gameStarted && (
+              <button className="start-button" onClick={startGame}>
+                Start Game
+              </button>
+            )}
+            <div id="game-container" ref={gameContainerRef} style={{ display: gameStarted ? 'block' : 'none' }}>
+              <div id="dino" ref={dinoRef} style={{ bottom: '0px' }}></div>
+            </div>
+            <div className="score" style={{ display: gameStarted ? 'block' : 'none' }}>Score: {score}</div>
+          </>
         )}
-        <div id="game-container" ref={gameContainerRef}>
-          <div id="dino" ref={dinoRef} style={{ bottom: '0px' }}></div>
-        </div>
-        <div className="score">Score: {score}</div>
       </div>
     </div>
   );
 };
 
 export default SecondPage;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

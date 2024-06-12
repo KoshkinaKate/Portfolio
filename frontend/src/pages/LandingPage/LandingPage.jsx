@@ -12,7 +12,7 @@ export default function LandingPage() {
         <h1 className="name">I'm Kate</h1>
         <h3 className="intro">software engineer  .  front-end  .  back-end  .  </h3>
         <h4 className="descripton">
-          I'm ready to assist with your projects and am eager for new opportunities.
+        Seeking full-time opportunities and ready to bring my skills to your team.
         </h4>
         <Link className="topage" to="/secondpage">
           <div className="portfolio-link">
