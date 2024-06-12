@@ -1,85 +1,178 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Poppins', sans-serif;
-  background-color: #000;
-  color: #fff;
-}
-
 .SP {
-  border: solid transparent;
-  margin-left: 220px;
-}
-
-.second-page-container {
-  position: relative;
-  width: 100%;
-  height: calc(100vh - 60px); /* Adjust height considering NavBar height */
-  background-color: #000;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  margin: 0 220px 0 220px;
+}
+
+.second-page-container {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .start-button {
   padding: 10px 20px;
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #333;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  z-index: 10;
-}
-
-.start-button:hover {
   background-color: #fff;
+  font-family: 'Poppins', sans-serif;
   color: #000;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.result {
+  font-size: 1.2em;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+.result:hover{
+  color:#FF0036;
+}
+.start-button:hover {
+  background-color: #FF0036;
 }
 
-#game-container {
+.instructions {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #f9a826;
+  font-size: 30px;
+  font-weight: 200;
+  display: none;
+}
+
+.game-container {
   position: relative;
-  width: 600px;
-  height: 200px;
-  background-color: #fff;
-  border: 2px solid #000;
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  background-color: black;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #dino {
   position: absolute;
   bottom: 0;
   left: 50px;
-  width: 50px;
-  height: 50px;
-  background-color: green;
+  width: 300px;
+  height: 300px;
+  background-image: url('/assets/dino.gif');
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  /* border: solid white; */
 }
 
 .obstacle {
   position: absolute;
   bottom: 0;
-  width: 20px;
-  height: 40px;
-  background-color: red;
+  width: 170px;
+  height: 170px;
+  background-image: url('../../assets/pictures/coin.gif'); /* Update to use GIF */
+  background-size: cover;
+  background-position: center;
+  /* border: solid white; */
+  margin-bottom: 35px;
 }
 
 .game-over {
-  font-size: 24px;
-  color: red;
-  text-align: center;
-  margin-top: 20px;
+  font-size: 2em;
+  color: #f9a826;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
 }
 
 .score {
-  font-size: 24px;
-  margin-top: 20px;
-  color: #fff;
+  font-size: 2em;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
 }
+
+/* ----------------------------------Media queries for smartphones (up to 480px) */
+@media (max-width: 480px) {
+  .SP {
+    margin: 0 20px;
+  }
+
+  .game-container {
+    height: 200px;
+  }
+
+  .start-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+
+  .instructions {
+    font-size: 24px;
+  }
+
+  .game-over,
+  .score {
+    font-size: 1.5em;
+  }
+}
+
+/* ----------------------------------Media queries for tablets (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .SP {
+    margin: 0 50px;
+  }
+
+  .game-container {
+    height: 220px;
+  }
+
+  .start-button {
+    font-size: 18px;
+    padding: 9px 18px;
+  }
+
+  .instructions {
+    font-size: 26px;
+  }
+
+  .game-over,
+  .score {
+    font-size: 1.75em;
+  }
+}
+
+/*--------------------------------- Media queries for desktops (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .SP {
+    margin: 0 100px;
+  }
+
+  .game-container {
+    height: 240px;
+  }
+
+  .start-button {
+    font-size: 19px;
+    padding: 10px 19px;
+  }
+
+  .instructions {
+    font-size: 28px;
+  }
+
+  .game-over,
+  .score {
+    font-size: 1.85em;
+  }
+}
+
+
+
