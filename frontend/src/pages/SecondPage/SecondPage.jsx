@@ -140,7 +140,7 @@ const SecondPage = () => {
               </button>
             )}
             <div className="instructions" style={{ display: gameStarted ? 'block' : 'none' }}>
-              Help the kitty escape! Press the spacebar to jump over the obstacles.
+              Help Kate collect coins! Press the spacebar to jump over the obstacles.
             </div>
             <div className="game-container" ref={gameContainerRef} style={{ display: gameStarted ? 'block' : 'none' }}>
               <div id="dino" ref={dinoRef} style={{ bottom: '0px', backgroundImage: `url(${dinoGif})` }}></div>
