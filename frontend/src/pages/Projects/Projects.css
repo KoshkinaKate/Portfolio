@@ -10,7 +10,9 @@
   flex-direction: column;
   align-items: center;
   padding-top: 20px;
-  margin-left: 220px;
+  margin-left: 240px;
+  margin-right: 40px;
+  
 }
 
 .project-container {
@@ -64,11 +66,22 @@
   padding-left: 30px;
 }
 
-.section-number {
+.section-number, .section-number2, .section-number3 {
   font-size: 4em;
-  color: #CDF27C;
   margin-right: 10px;
   margin-left: 30px;
+}
+
+.section-number{
+  color: #CDF27C;
+}
+
+.section-number2{
+  color: #EC5D7B;
+}
+
+.section-number3{
+  color: #A583F0;
 }
 
 .section-text {
