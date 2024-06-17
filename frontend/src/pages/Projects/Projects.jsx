@@ -18,10 +18,11 @@ const projects = [
     keyFeatures: [
       'Interactive sports discovery tool',
       'Detailed information and benefits of various sports',
-      'Upcoming sports events and registration',
+      'Upcoming sports events and registration (in process)',
+      'Ability to leave/delete comments on events'
     ],
     codeImages: [codeImage1, codeImage2], 
-    technologiesUsed: 'React, CSS, Node.js, Express, MongoDB', 
+    technologiesUsed: 'JavaScript, React, CSS, Node.js, Express, MongoDB, JSON Web Token, Render + Netlify ', 
     websiteLink: 'https://playfit.netlify.app/', 
     githubLink: 'https://github.com/KoshkinaKate/Sport_Kids_Capstone_Project',
   },
@@ -33,8 +34,8 @@ const Project = ({ mainImage, introduction, video, keyFeatures, codeImages, tech
   <div className="project-container">
     <img src={mainImage} alt="Main project" className="project-main-image" />
     <div className="project-links">
-      <a href={websiteLink} target="_blank" rel="website" className="project-link">Live Website</a>
-      <a href={githubLink} target="_blank" rel="gethub" className="project-link">GitHub Repository</a>
+      <a href={websiteLink} target="_blank" rel="noopener noreferrer" className="project-link">Live Website</a>
+      <a href={githubLink} target="_blank" rel="noopener noreferrer" className="project-link">GitHub Repository</a>
     </div>
     <div className="section">
       <div className="section-title">
@@ -46,11 +47,9 @@ const Project = ({ mainImage, introduction, video, keyFeatures, codeImages, tech
       <div className="section">
         <iframe
           src={video}
-          width="880"
-          height="495"
-          allow="autoplay"
-          title="Google Drive Video"
           className="project-video"
+          title="Google Drive Video"
+          allow="autoplay"
         ></iframe>
       </div>
     )}
@@ -65,7 +64,7 @@ const Project = ({ mainImage, introduction, video, keyFeatures, codeImages, tech
       </ul>
     </div>
     <div className="section">
-      <div className="project-code-images">
+      <div className="project-code-images-cont">
         {codeImages.map((image, index) => (
           <img key={index} src={image} alt={`Code screenshot ${index + 1}`} className="project-code-image" />
         ))}
@@ -90,6 +89,7 @@ const Projects = () => (
 );
 
 export default Projects;
+
 
 
 
