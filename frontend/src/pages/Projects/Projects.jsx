@@ -5,7 +5,6 @@ import mainImage1 from '../../assets/pictures/PlayFit1.png';
 import codeImage1 from '../../assets/pictures/PlayFitCode1.png';
 import codeImage2 from '../../assets/pictures/PlayFitCode2.png';
 
-
 const googleDriveUrl = import.meta.env.VITE_GOOGLE_DRIVE_URL;
 
 const projects = [
@@ -22,16 +21,17 @@ const projects = [
       'Ability to leave/delete comments on events'
     ],
     codeImages: [codeImage1, codeImage2], 
-    technologiesUsed: 'JavaScript, React, CSS, Node.js, Express, MongoDB, JSON Web Token, Render + Netlify ', 
+    technologiesUsed: 'JavaScript, React, CSS, Node.js, Express, MongoDB, JSON Web Token, Render + Netlify', 
     websiteLink: 'https://playfit.netlify.app/', 
     githubLink: 'https://github.com/KoshkinaKate/Sport_Kids_Capstone_Project',
   },
-  //  projects2,3,4,5
+  // other projects...
 ];
 
 // Define a Project component to display individual project details
-const Project = ({ mainImage, introduction, video, keyFeatures, codeImages, technologiesUsed, websiteLink, githubLink }) => (
+const Project = ({ title, mainImage, introduction, video, keyFeatures, codeImages, technologiesUsed, websiteLink, githubLink }) => (
   <div className="project-container">
+    <h2 className="project-title">{title}</h2>
     <img src={mainImage} alt="Main project" className="project-main-image" />
     <div className="project-links">
       <a href={websiteLink} target="_blank" rel="noopener noreferrer" className="project-link">Live Website</a>
@@ -76,10 +76,11 @@ const Project = ({ mainImage, introduction, video, keyFeatures, codeImages, tech
       </div>
       <p className="section-text">{technologiesUsed}</p>
     </div>
+    <hr className="project-divider"/>
   </div>
 );
 
-// define a Projects component to display a list of projects
+// Define a Projects component to display a list of projects
 const Projects = () => (
   <div className="projects-page">
     {projects.map(project => (
@@ -89,6 +90,7 @@ const Projects = () => (
 );
 
 export default Projects;
+
 
 
 
